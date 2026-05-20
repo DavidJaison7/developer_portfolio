@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ============================================
+       David Jaison Raj L — Portfolio
+       ============================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- SEO Meta Tags -->
+  <title>David Jaison Raj L | AI Engineer &amp; Software Developer</title>
+  <meta name="description" content="Portfolio of David Jaison Raj L — AI Engineer, Software Developer, and Data Scientist specializing in Machine Learning, Full-Stack Development, and Data Analytics." />
+  <meta name="keywords" content="AI Engineer, Software Developer, Data Scientist, Machine Learning, Full-Stack, Python, TensorFlow, React, Portfolio" />
+  <meta name="author" content="David Jaison Raj L" />
+  <meta name="theme-color" content="#0a0a0f" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="David Jaison Raj L | AI Engineer &amp; Software Developer" />
+  <meta property="og:description" content="AI Engineer and Software Developer with hands-on experience in Machine Learning, Full-Stack Development, and Data Analytics." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://davidjaisonraj.dev" />
+  <meta property="og:image" content="https://davidjaisonraj.dev/og-image.png" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="David Jaison Raj L | AI Engineer &amp; Software Developer" />
+  <meta name="twitter:description" content="AI Engineer and Software Developer with hands-on experience in Machine Learning, Full-Stack Development, and Data Analytics." />
+
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ==========================================
+       PRELOADER
+       ========================================== -->
+  <div id="preloader" aria-label="Loading">
+    <div class="preloader-inner">
+      <div class="preloader-logo">DJ</div>
+      <div class="preloader-spinner">
+        <div class="spinner-ring"></div>
+        <div class="spinner-ring"></div>
+        <div class="spinner-ring"></div>
+      </div>
+      <p class="preloader-text">Initializing Portfolio&hellip;</p>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       CURSOR GLOW (decorative)
+       ========================================== -->
+  <div id="cursor-glow" aria-hidden="true"></div>
+
+  <!-- ==========================================
+       NAVIGATION — Fixed Top, Glassmorphic
+       ========================================== -->
+  <header id="site-header">
+    <nav id="navbar" class="navbar glass" role="navigation" aria-label="Primary Navigation">
+      <div class="nav-container">
+        <!-- Logo -->
+        <a href="#hero" class="nav-logo" id="nav-logo" aria-label="David Jaison Raj L — Home">
+          <span class="logo-text">DJ</span>
+          <span class="logo-dot"></span>
+        </a>
+
+        <!-- Desktop Nav Links -->
+        <ul class="nav-links" id="nav-links" role="menubar">
+          <li role="none"><a href="#about" class="nav-link" role="menuitem" data-section="about">About</a></li>
+          <li role="none"><a href="#skills" class="nav-link" role="menuitem" data-section="skills">Skills</a></li>
+          <li role="none"><a href="#experience" class="nav-link" role="menuitem" data-section="experience">Experience</a></li>
+          <li role="none"><a href="#projects" class="nav-link" role="menuitem" data-section="projects">Projects</a></li>
+          <li role="none"><a href="#certifications" class="nav-link" role="menuitem" data-section="certifications">Certifications</a></li>
+          <li role="none"><a href="#contact" class="nav-link" role="menuitem" data-section="contact">Contact</a></li>
+        </ul>
+
+        <!-- Hamburger Menu Toggle (Mobile) -->
+        <button id="hamburger" class="hamburger" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ==========================================
+       MAIN CONTENT
+       ========================================== -->
+  <main id="main-content">
+
+    <!-- ========================================
+         HERO SECTION
+         ======================================== -->
+    <section id="hero" class="hero-section" aria-label="Introduction">
+      <!-- Particle Canvas Background -->
+      <canvas id="hero-particles" aria-hidden="true"></canvas>
+
+      <!-- Floating Geometric Shapes -->
+      <div class="hero-shapes" aria-hidden="true">
+        <div class="shape shape-1" id="shape-circle"></div>
+        <div class="shape shape-2" id="shape-triangle"></div>
+        <div class="shape shape-3" id="shape-square"></div>
+        <div class="shape shape-4" id="shape-diamond"></div>
+        <div class="shape shape-5" id="shape-hex"></div>
+        <div class="shape shape-6" id="shape-ring"></div>
+      </div>
+
+      <div class="hero-content" data-animate="fade-up">
+        <div class="hero-badge" data-animate="fade-down">
+          <i class="fas fa-circle status-dot" aria-hidden="true"></i>
+          <span>Available for opportunities</span>
+        </div>
+
+        <h1 class="hero-title" id="hero-title">
+          Hi, I'm <span class="highlight-name">David Jaison Raj L</span>
+        </h1>
+
+        <div class="hero-typing-wrapper" id="hero-typing-wrapper">
+          <span class="typing-prefix">I'm a&nbsp;</span>
+          <span class="typing-text" id="typing-text" aria-live="polite" aria-label="AI Engineer, Software Developer, Data Scientist"></span>
+          <span class="typing-cursor" aria-hidden="true">|</span>
+        </div>
+
+        <!-- Roles for typing effect (hidden, consumed by JS) -->
+        <div id="typing-roles" aria-hidden="true" hidden>
+          <span data-role="AI Engineer"></span>
+          <span data-role="Software Developer"></span>
+          <span data-role="Data Scientist"></span>
+        </div>
+
+        <p class="hero-tagline" data-animate="fade-up" data-delay="200">
+          Building intelligent systems that shape the future.
+        </p>
+
+        <div class="hero-cta" data-animate="fade-up" data-delay="400">
+          <a href="#projects" class="btn btn-primary" id="cta-projects">
+            <i class="fas fa-rocket" aria-hidden="true"></i>
+            <span>View My Work</span>
+          </a>
+          <a href="#" class="btn btn-secondary" id="cta-cv" download>
+            <i class="fas fa-download" aria-hidden="true"></i>
+            <span>Download CV</span>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="hero-scroll-indicator" data-animate="fade-up" data-delay="600">
+        <a href="#about" class="scroll-down" aria-label="Scroll to About section">
+          <span class="scroll-mouse">
+            <span class="scroll-wheel"></span>
+          </span>
+          <span class="scroll-text">Scroll Down</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ========================================
+         ABOUT SECTION
+         ======================================== -->
+    <section id="about" class="section about-section" aria-labelledby="about-title">
+      <div class="container">
+        <div class="section-header" data-animate="fade-up">
+          <span class="section-tag"><i class="fas fa-user" aria-hidden="true"></i> Introduction</span>
+          <h2 class="section-title" id="about-title">About Me</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="about-grid">
+          <!-- Profile Image Placeholder -->
+          <div class="about-image-wrapper" data-animate="fade-right">
+            <div class="about-image glass" id="about-avatar">
+              <div class="avatar-initials">DJ</div>
+              <div class="avatar-ring" aria-hidden="true"></div>
+            </div>
+            <div class="about-image-decoration" aria-hidden="true"></div>
+          </div>
+
+          <!-- Bio Content -->
+          <div class="about-content" data-animate="fade-left">
+            <h3 class="about-subtitle">
+              AI Engineer &amp; Software Developer based in <span class="highlight">India</span>
+            </h3>
+
+            <p class="about-bio">
+              AI Engineer and Software Developer with hands-on experience in Machine Learning,
+              Full-Stack Development, and Data Analytics. Proficient in Python, Java, SQL,
+              TensorFlow, and React.js, with a strong focus on building scalable, data-driven
+              applications.
+            </p>
+
+            <p class="about-bio">
+              Currently pursuing a <strong>B.Tech in Artificial Intelligence and Data Science</strong>
+              at <strong>Karunya Institute of Technology and Sciences</strong>, Coimbatore, India
+              <em>(CGPA: 7.87/10)</em>, graduating in May 2026.
+            </p>
+
+            <!-- Stats -->
+            <div class="about-stats" id="about-stats">
+              <div class="stat-card glass" data-animate="zoom-in" data-delay="0">
+                <span class="stat-number" id="stat-projects" data-count="6">0</span>
+                <span class="stat-suffix">+</span>
+                <span class="stat-label">Projects</span>
+              </div>
+              <div class="stat-card glass" data-animate="zoom-in" data-delay="150">
+                <span class="stat-number" id="stat-certifications" data-count="5">0</span>
+                <span class="stat-suffix">+</span>
+                <span class="stat-label">Certifications</span>
+              </div>
+              <div class="stat-card glass" data-animate="zoom-in" data-delay="300">
+                <span class="stat-number" id="stat-experience" data-count="1">0</span>
+                <span class="stat-suffix">+</span>
+                <span class="stat-label">Years Experience</span>
+              </div>
+            </div>
+
+            <p class="about-tagline">
+              <i class="fas fa-quote-left" aria-hidden="true"></i>
+              Turning data into decisions and code into impact — one model at a time.
+              <i class="fas fa-quote-right" aria-hidden="true"></i>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         SKILLS SECTION
+         ======================================== -->
+    <section id="skills" class="section skills-section" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-header" data-animate="fade-up">
+          <span class="section-tag"><i class="fas fa-code" aria-hidden="true"></i> Expertise</span>
+          <h2 class="section-title" id="skills-title">Tech Stack &amp; Skills</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="skills-grid">
+
+          <!-- Programming Languages -->
+          <div class="skill-category glass" data-animate="fade-up" data-delay="0" id="skills-languages">
+            <div class="skill-category-header">
+              <i class="fas fa-laptop-code" aria-hidden="true"></i>
+              <h3>Programming Languages</h3>
+            </div>
+            <div class="skill-list">
+              <div class="skill-item" id="skill-python">
+                <div class="skill-info">
+                  <span class="skill-name">Python</span>
+                  <span class="skill-percent">90%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="90" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="Python proficiency: 90%"></div>
+                </div>
+              </div>
+              <div class="skill-item" id="skill-java">
+                <div class="skill-info">
+                  <span class="skill-name">Java</span>
+                  <span class="skill-percent">75%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="Java proficiency: 75%"></div>
+                </div>
+              </div>
+              <div class="skill-item" id="skill-sql">
+                <div class="skill-info">
+                  <span class="skill-name">SQL</span>
+                  <span class="skill-percent">80%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="80" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="SQL proficiency: 80%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ML & AI Tools -->
+          <div class="skill-category glass" data-animate="fade-up" data-delay="100" id="skills-ml">
+            <div class="skill-category-header">
+              <i class="fas fa-brain" aria-hidden="true"></i>
+              <h3>ML &amp; AI Tools</h3>
+            </div>
+            <div class="skill-list">
+              <div class="skill-item" id="skill-tensorflow">
+                <div class="skill-info">
+                  <span class="skill-name">TensorFlow</span>
+                  <span class="skill-percent">85%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="85" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="TensorFlow proficiency: 85%"></div>
+                </div>
+              </div>
+              <div class="skill-item" id="skill-sklearn">
+                <div class="skill-info">
+                  <span class="skill-name">Scikit-learn</span>
+                  <span class="skill-percent">80%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="80" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="Scikit-learn proficiency: 80%"></div>
+                </div>
+              </div>
+              <div class="skill-item" id="skill-pandas">
+                <div class="skill-info">
+                  <span class="skill-name">Pandas</span>
+                  <span class="skill-percent">85%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="85" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="Pandas proficiency: 85%"></div>
+                </div>
+              </div>
+              <div class="skill-item" id="skill-opencv">
+                <div class="skill-info">
+                  <span class="skill-name">OpenCV</span>
+                  <span class="skill-percent">75%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="OpenCV proficiency: 75%"></div>
+                </div>
+              </div>
+              <div class="skill-item" id="skill-powerbi">
+                <div class="skill-info">
+                  <span class="skill-name">Power BI</span>
+                  <span class="skill-percent">70%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="70" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="Power BI proficiency: 70%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Web Development -->
+          <div class="skill-category glass" data-animate="fade-up" data-delay="200" id="skills-web">
+            <div class="skill-category-header">
+              <i class="fas fa-globe" aria-hidden="true"></i>
+              <h3>Web Development</h3>
+            </div>
+            <div class="skill-list">
+              <div class="skill-item" id="skill-htmlcss">
+                <div class="skill-info">
+                  <span class="skill-name">HTML/CSS</span>
+                  <span class="skill-percent">85%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="85" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="HTML/CSS proficiency: 85%"></div>
+                </div>
+              </div>
+              <div class="skill-item" id="skill-javascript">
+                <div class="skill-info">
+                  <span class="skill-name">JavaScript</span>
+                  <span class="skill-percent">80%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="80" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="JavaScript proficiency: 80%"></div>
+                </div>
+              </div>
+              <div class="skill-item" id="skill-react">
+                <div class="skill-info">
+                  <span class="skill-name">React.js</span>
+                  <span class="skill-percent">75%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="React.js proficiency: 75%"></div>
+                </div>
+              </div>
+              <div class="skill-item" id="skill-node">
+                <div class="skill-info">
+                  <span class="skill-name">Node.js</span>
+                  <span class="skill-percent">70%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="70" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="Node.js proficiency: 70%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Backend & Databases -->
+          <div class="skill-category glass" data-animate="fade-up" data-delay="300" id="skills-backend">
+            <div class="skill-category-header">
+              <i class="fas fa-database" aria-hidden="true"></i>
+              <h3>Backend &amp; Databases</h3>
+            </div>
+            <div class="skill-list">
+              <div class="skill-item" id="skill-flask">
+                <div class="skill-info">
+                  <span class="skill-name">Flask</span>
+                  <span class="skill-percent">80%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="80" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="Flask proficiency: 80%"></div>
+                </div>
+              </div>
+              <div class="skill-item" id="skill-django">
+                <div class="skill-info">
+                  <span class="skill-name">Django</span>
+                  <span class="skill-percent">70%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="70" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="Django proficiency: 70%"></div>
+                </div>
+              </div>
+              <div class="skill-item" id="skill-mysql">
+                <div class="skill-info">
+                  <span class="skill-name">MySQL</span>
+                  <span class="skill-percent">80%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="80" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="MySQL proficiency: 80%"></div>
+                </div>
+              </div>
+              <div class="skill-item" id="skill-postgres">
+                <div class="skill-info">
+                  <span class="skill-name">PostgreSQL</span>
+                  <span class="skill-percent">75%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="PostgreSQL proficiency: 75%"></div>
+                </div>
+              </div>
+              <div class="skill-item" id="skill-mongodb">
+                <div class="skill-info">
+                  <span class="skill-name">MongoDB</span>
+                  <span class="skill-percent">70%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="70" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="MongoDB proficiency: 70%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- DevOps & Tools -->
+          <div class="skill-category glass" data-animate="fade-up" data-delay="400" id="skills-devops">
+            <div class="skill-category-header">
+              <i class="fas fa-tools" aria-hidden="true"></i>
+              <h3>DevOps &amp; Tools</h3>
+            </div>
+            <div class="skill-list">
+              <div class="skill-item" id="skill-git">
+                <div class="skill-info">
+                  <span class="skill-name">Git</span>
+                  <span class="skill-percent">85%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="85" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="Git proficiency: 85%"></div>
+                </div>
+              </div>
+              <div class="skill-item" id="skill-docker">
+                <div class="skill-info">
+                  <span class="skill-name">Docker</span>
+                  <span class="skill-percent">70%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="70" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="Docker proficiency: 70%"></div>
+                </div>
+              </div>
+              <div class="skill-item" id="skill-selenium">
+                <div class="skill-info">
+                  <span class="skill-name">Selenium</span>
+                  <span class="skill-percent">65%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="65" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" aria-label="Selenium proficiency: 65%"></div>
+                </div>
+              </div>
+              <div class="skill-item" id="skill-cicd">
+                <div class="skill-info">
+                  <span class="skill-name">CI/CD</span>
+                  <span class="skill-percent">70%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="70" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="CI/CD proficiency: 70%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /.skills-grid -->
+      </div>
+    </section>
+
+    <!-- ========================================
+         EXPERIENCE SECTION
+         ======================================== -->
+    <section id="experience" class="section experience-section" aria-labelledby="experience-title">
+      <div class="container">
+        <div class="section-header" data-animate="fade-up">
+          <span class="section-tag"><i class="fas fa-briefcase" aria-hidden="true"></i> Journey</span>
+          <h2 class="section-title" id="experience-title">Experience</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="timeline" id="timeline">
+
+          <!-- Education -->
+          <article class="timeline-item" data-animate="fade-right" id="timeline-education">
+            <div class="timeline-marker">
+              <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+            </div>
+            <div class="timeline-content glass">
+              <div class="timeline-badge education">
+                <i class="fas fa-graduation-cap" aria-hidden="true"></i> Education
+              </div>
+              <h3 class="timeline-title">B.Tech in Artificial Intelligence &amp; Data Science</h3>
+              <h4 class="timeline-subtitle">Karunya Institute of Technology and Sciences, Coimbatore</h4>
+              <time class="timeline-date" datetime="2022-08/2026-05">
+                <i class="far fa-calendar-alt" aria-hidden="true"></i> Aug 2022 – May 2026
+              </time>
+              <p class="timeline-description">
+                Pursuing a Bachelor of Technology degree specializing in Artificial Intelligence and
+                Data Science, with a current CGPA of <strong>7.87/10</strong>. Coursework includes
+                Machine Learning, Deep Learning, Data Structures, Algorithms, and Software Engineering.
+              </p>
+              <div class="timeline-tags">
+                <span class="tag">AI &amp; Data Science</span>
+                <span class="tag">CGPA: 7.87</span>
+                <span class="tag">Coimbatore, India</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Internship -->
+          <article class="timeline-item" data-animate="fade-left" id="timeline-internship">
+            <div class="timeline-marker">
+              <i class="fas fa-laptop-code" aria-hidden="true"></i>
+            </div>
+            <div class="timeline-content glass">
+              <div class="timeline-badge internship">
+                <i class="fas fa-building" aria-hidden="true"></i> Internship
+              </div>
+              <h3 class="timeline-title">Data Science Intern</h3>
+              <h4 class="timeline-subtitle">ElSystems Technologies</h4>
+              <time class="timeline-date" datetime="2024">
+                <i class="far fa-calendar-alt" aria-hidden="true"></i> 2024
+              </time>
+              <p class="timeline-description">
+                Built a diabetes prediction model leveraging <strong>Random Forest</strong> and
+                <strong>Logistic Regression</strong> algorithms. Performed data preprocessing,
+                feature engineering, and model evaluation to deliver an accurate predictive solution
+                for healthcare analytics.
+              </p>
+              <div class="timeline-tags">
+                <span class="tag">Machine Learning</span>
+                <span class="tag">Random Forest</span>
+                <span class="tag">Logistic Regression</span>
+                <span class="tag">Healthcare AI</span>
+              </div>
+            </div>
+          </article>
+
+        </div><!-- /.timeline -->
+      </div>
+    </section>
+
+    <!-- ========================================
+         PROJECTS SECTION
+         ======================================== -->
+    <section id="projects" class="section projects-section" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-header" data-animate="fade-up">
+          <span class="section-tag"><i class="fas fa-diagram-project" aria-hidden="true"></i> Portfolio</span>
+          <h2 class="section-title" id="projects-title">Featured Projects</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="projects-grid" id="projects-grid">
+
+          <!-- Project 1: Multi-Modal Cyber Threat Detection -->
+          <article class="project-card glass featured" data-animate="fade-up" data-delay="0" id="project-cyber-threat">
+            <div class="project-card-header">
+              <div class="project-icon">
+                <i class="fas fa-shield-halved" aria-hidden="true"></i>
+              </div>
+              <div class="project-badges">
+                <span class="badge featured-badge"><i class="fas fa-star" aria-hidden="true"></i> Featured</span>
+                <span class="badge research-badge"><i class="fas fa-flask" aria-hidden="true"></i> Research</span>
+              </div>
+            </div>
+            <h3 class="project-title">Multi-Modal Cyber Threat Detection</h3>
+            <p class="project-description">
+              Research framework using visual, textual, and behavioral signals for comprehensive
+              cyber threat detection. Features CLIP-based classification &amp; OCR semantic analysis
+              with Dempster-Shafer fusion for robust multi-modal evidence combination.
+            </p>
+            <div class="project-tags">
+              <span class="tech-tag">PyTorch</span>
+              <span class="tech-tag">CLIP</span>
+              <span class="tech-tag">EasyOCR</span>
+              <span class="tech-tag">OpenCV</span>
+              <span class="tech-tag">Dempster-Shafer</span>
+            </div>
+
+          </article>
+
+          <!-- Project 2: AQI Prediction System -->
+          <article class="project-card glass" data-animate="fade-up" data-delay="100" id="project-aqi">
+            <div class="project-card-header">
+              <div class="project-icon">
+                <i class="fas fa-wind" aria-hidden="true"></i>
+              </div>
+            </div>
+            <h3 class="project-title">AQI Prediction System</h3>
+            <p class="project-description">
+              ML-powered air quality prediction system with a real-time web interface. Uses
+              XGBoost for accurate AQI forecasting, deployed on Vercel for seamless accessibility.
+            </p>
+            <div class="project-tags">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Flask</span>
+              <span class="tech-tag">XGBoost</span>
+              <span class="tech-tag">Vercel</span>
+            </div>
+
+          </article>
+
+          <!-- Project 3: Indian Food Calorie Prediction -->
+          <article class="project-card glass" data-animate="fade-up" data-delay="200" id="project-food-calorie">
+            <div class="project-card-header">
+              <div class="project-icon">
+                <i class="fas fa-utensils" aria-hidden="true"></i>
+              </div>
+            </div>
+            <h3 class="project-title">Indian Food Calorie Prediction</h3>
+            <p class="project-description">
+              CNN-based food recognition system that identifies Indian food items and provides
+              accurate calorie estimations. Utilizes deep learning for image classification to
+              promote health-conscious eating.
+            </p>
+            <div class="project-tags">
+              <span class="tech-tag">TensorFlow</span>
+              <span class="tech-tag">CNN</span>
+              <span class="tech-tag">Python</span>
+            </div>
+
+          </article>
+
+          <!-- Project 4: Emotion-Aware Chatbot -->
+          <article class="project-card glass" data-animate="fade-up" data-delay="300" id="project-chatbot">
+            <div class="project-card-header">
+              <div class="project-icon">
+                <i class="fas fa-robot" aria-hidden="true"></i>
+              </div>
+              <div class="project-badges">
+                <span class="badge award-badge"><i class="fas fa-trophy" aria-hidden="true"></i> 3rd Prize</span>
+              </div>
+            </div>
+            <h3 class="project-title">Emotion-Aware Chatbot</h3>
+            <p class="project-description">
+              Generative AI chatbot enhanced with sentiment analysis capabilities. Leverages
+              GPT-2.0 and Emotion API to deliver contextually aware, empathetic responses.
+              Won <strong>3rd Prize at the Gen-AI Hackathon</strong>.
+            </p>
+            <div class="project-tags">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">GPT-2.0</span>
+              <span class="tech-tag">Emotion API</span>
+            </div>
+
+          </article>
+
+          <!-- Project 5: Cloud-Based Blog Platform -->
+          <article class="project-card glass" data-animate="fade-up" data-delay="400" id="project-blog">
+            <div class="project-card-header">
+              <div class="project-icon">
+                <i class="fas fa-cloud" aria-hidden="true"></i>
+              </div>
+            </div>
+            <h3 class="project-title">Cloud-Based Blog Platform</h3>
+            <p class="project-description">
+              Full-stack blog platform with authentication, CRUD operations, and REST APIs.
+              Built with Django and deployed on Render with CI/CD pipeline integration for
+              continuous delivery.
+            </p>
+            <div class="project-tags">
+              <span class="tech-tag">Django</span>
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">JS</span>
+              <span class="tech-tag">Render</span>
+            </div>
+
+          </article>
+
+          <!-- Project 6: Face Detection Attendance -->
+          <article class="project-card glass" data-animate="fade-up" data-delay="500" id="project-attendance">
+            <div class="project-card-header">
+              <div class="project-icon">
+                <i class="fas fa-face-smile" aria-hidden="true"></i>
+              </div>
+            </div>
+            <h3 class="project-title">Face Detection Attendance</h3>
+            <p class="project-description">
+              Real-time face detection system for automated attendance tracking. Uses OpenCV
+              for facial recognition to streamline the attendance process in educational and
+              corporate environments.
+            </p>
+            <div class="project-tags">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">OpenCV</span>
+            </div>
+
+          </article>
+
+        </div><!-- /.projects-grid -->
+      </div>
+    </section>
+
+    <!-- ========================================
+         CERTIFICATIONS SECTION
+         ======================================== -->
+    <section id="certifications" class="section certifications-section" aria-labelledby="certifications-title">
+      <div class="container">
+        <div class="section-header" data-animate="fade-up">
+          <span class="section-tag"><i class="fas fa-award" aria-hidden="true"></i> Recognition</span>
+          <h2 class="section-title" id="certifications-title">Certifications &amp; Achievements</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="certifications-grid" id="certifications-grid">
+
+          <article class="cert-card glass" data-animate="fade-up" data-delay="0" id="cert-pcap">
+            <div class="cert-icon">
+              <i class="fab fa-python" aria-hidden="true"></i>
+            </div>
+            <h3 class="cert-title">PCAP: Python</h3>
+            <p class="cert-issuer"><i class="fas fa-building" aria-hidden="true"></i> Cisco</p>
+          </article>
+
+          <article class="cert-card glass" data-animate="fade-up" data-delay="100" id="cert-java">
+            <div class="cert-icon">
+              <i class="fab fa-java" aria-hidden="true"></i>
+            </div>
+            <h3 class="cert-title">Java Fundamentals</h3>
+            <p class="cert-issuer"><i class="fas fa-building" aria-hidden="true"></i> Infosys SpringBoard</p>
+          </article>
+
+          <article class="cert-card glass" data-animate="fade-up" data-delay="200" id="cert-data-analytics">
+            <div class="cert-icon">
+              <i class="fas fa-chart-line" aria-hidden="true"></i>
+            </div>
+            <h3 class="cert-title">Data Analytics Essentials</h3>
+            <p class="cert-issuer"><i class="fas fa-building" aria-hidden="true"></i> Cisco</p>
+          </article>
+
+          <article class="cert-card glass" data-animate="fade-up" data-delay="300" id="cert-oracle">
+            <div class="cert-icon">
+              <i class="fas fa-cloud" aria-hidden="true"></i>
+            </div>
+            <h3 class="cert-title">Oracle Cloud Infrastructure 2025 Data Science Professional</h3>
+            <p class="cert-issuer"><i class="fas fa-building" aria-hidden="true"></i> Oracle</p>
+          </article>
+
+          <article class="cert-card glass" data-animate="fade-up" data-delay="400" id="cert-aws-microservices">
+            <div class="cert-icon">
+              <i class="fab fa-aws" aria-hidden="true"></i>
+            </div>
+            <h3 class="cert-title">Microservices &amp; CI/CD Pipeline Builder</h3>
+            <p class="cert-issuer"><i class="fas fa-building" aria-hidden="true"></i> AWS Academy</p>
+          </article>
+
+          <article class="cert-card glass" data-animate="fade-up" data-delay="500" id="cert-aws-devops">
+            <div class="cert-icon">
+              <i class="fab fa-aws" aria-hidden="true"></i>
+            </div>
+            <h3 class="cert-title">Getting Started with DevOps</h3>
+            <p class="cert-issuer"><i class="fas fa-building" aria-hidden="true"></i> AWS Skill Builder</p>
+          </article>
+
+          <article class="cert-card glass achievement" data-animate="fade-up" data-delay="600" id="cert-hackathon">
+            <div class="cert-icon trophy">
+              <i class="fas fa-trophy" aria-hidden="true"></i>
+            </div>
+            <h3 class="cert-title">3rd Prize — Gen-AI Hackathon</h3>
+            <p class="cert-issuer"><i class="fas fa-university" aria-hidden="true"></i> Karunya University</p>
+          </article>
+
+        </div><!-- /.certifications-grid -->
+      </div>
+    </section>
+
+    <!-- ========================================
+         CONTACT SECTION
+         ======================================== -->
+    <section id="contact" class="section contact-section" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="section-header" data-animate="fade-up">
+          <span class="section-tag"><i class="fas fa-envelope" aria-hidden="true"></i> Get In Touch</span>
+          <h2 class="section-title" id="contact-title">Let's Connect</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="contact-grid">
+
+          <!-- Contact Form -->
+          <div class="contact-form-wrapper glass" data-animate="fade-right">
+            <form id="contact-form" class="contact-form" action="#" method="POST" novalidate>
+              <div class="form-group" id="form-group-name">
+                <label for="contact-name" class="form-label">
+                  <i class="fas fa-user" aria-hidden="true"></i> Your Name
+                </label>
+                <input
+                  type="text"
+                  id="contact-name"
+                  name="name"
+                  class="form-input"
+                  placeholder="John Doe"
+                  required
+                  autocomplete="name"
+                />
+                <span class="form-error" id="error-name" aria-live="polite"></span>
+              </div>
+
+              <div class="form-group" id="form-group-email">
+                <label for="contact-email" class="form-label">
+                  <i class="fas fa-envelope" aria-hidden="true"></i> Your Email
+                </label>
+                <input
+                  type="email"
+                  id="contact-email"
+                  name="email"
+                  class="form-input"
+                  placeholder="john@example.com"
+                  required
+                  autocomplete="email"
+                />
+                <span class="form-error" id="error-email" aria-live="polite"></span>
+              </div>
+
+              <div class="form-group" id="form-group-message">
+                <label for="contact-message" class="form-label">
+                  <i class="fas fa-comment-dots" aria-hidden="true"></i> Your Message
+                </label>
+                <textarea
+                  id="contact-message"
+                  name="message"
+                  class="form-input form-textarea"
+                  placeholder="Tell me about your project or idea…"
+                  rows="5"
+                  required
+                ></textarea>
+                <span class="form-error" id="error-message" aria-live="polite"></span>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-full" id="contact-submit">
+                <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                <span>Send Message</span>
+              </button>
+
+              <div class="form-status" id="form-status" aria-live="polite" hidden></div>
+            </form>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="contact-info" data-animate="fade-left">
+            <div class="contact-info-card glass" id="contact-email-card">
+              <div class="contact-info-icon">
+                <i class="fas fa-envelope" aria-hidden="true"></i>
+              </div>
+              <div class="contact-info-content">
+                <h3>Email</h3>
+                <a href="mailto:davidjaison2k4@gmail.com">davidjaison2k4@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="contact-info-card glass" id="contact-phone-card">
+              <div class="contact-info-icon">
+                <i class="fas fa-phone" aria-hidden="true"></i>
+              </div>
+              <div class="contact-info-content">
+                <h3>Phone</h3>
+                <a href="tel:+916382990743">+91 6382990743</a>
+              </div>
+            </div>
+
+            <div class="contact-info-card glass" id="contact-location-card">
+              <div class="contact-info-icon">
+                <i class="fas fa-location-dot" aria-hidden="true"></i>
+              </div>
+              <div class="contact-info-content">
+                <h3>Location</h3>
+                <p>Chennai, India</p>
+              </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="contact-socials" id="contact-socials">
+              <h3>Find me on</h3>
+              <div class="social-links">
+                <a href="https://linkedin.com" class="social-link" id="social-linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+                  <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                </a>
+                <a href="https://github.com" class="social-link" id="social-github" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+                  <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
+                <a href="https://leetcode.com" class="social-link" id="social-leetcode" target="_blank" rel="noopener noreferrer" aria-label="LeetCode Profile">
+                  <i class="fas fa-code" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /.contact-grid -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer id="site-footer" class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <a href="#hero" aria-label="Back to top">
+            <span class="logo-text">DJ</span>
+            <span class="logo-dot"></span>
+          </a>
+        </div>
+
+        <div class="footer-socials">
+          <a href="https://linkedin.com" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+          </a>
+          <a href="https://github.com" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <i class="fab fa-github" aria-hidden="true"></i>
+          </a>
+          <a href="https://leetcode.com" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="LeetCode">
+            <i class="fas fa-code" aria-hidden="true"></i>
+          </a>
+        </div>
+
+        <p class="footer-copy">
+          &copy; 2026 David Jaison Raj L. All rights reserved.
+        </p>
+
+        <p class="footer-tagline">
+          Built with <span class="heart" aria-label="love">&hearts;</span> and code.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       SCROLL-TO-TOP BUTTON
+       ========================================== -->
+  <button
+    id="scroll-to-top"
+    class="scroll-to-top"
+    type="button"
+    aria-label="Scroll to top"
+    title="Back to top"
+    hidden
+  >
+    <i class="fas fa-chevron-up" aria-hidden="true"></i>
+  </button>
+
+  <!-- ==========================================
+       SCRIPTS
+       ========================================== -->
+  <script src="script.js"></script>
+</body>
+</html>
