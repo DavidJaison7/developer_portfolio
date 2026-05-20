@@ -1006,9 +1006,36 @@ const ContactForm = (() => {
         return;
       }
 
-      // Success!
-      showToast("Message sent successfully! I'll get back to you soon. 🚀", "success");
-      form.reset();
+      // Send real POST request to Web3Forms
+      const formData = new FormData(form);
+      const submitBtn = $("#contact-submit", form) || form.querySelector("button[type='submit']");
+      const submitSpan = submitBtn ? submitBtn.querySelector("span") : null;
+      const originalText = submitSpan ? submitSpan.textContent : "Send Message";
+
+      if (submitBtn) submitBtn.disabled = true;
+      if (submitSpan) submitSpan.textContent = "Sending...";
+
+      fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      })
+      .then(async (response) => {
+        const json = await response.json();
+        if (response.status === 200) {
+          showToast("Message sent successfully! I'll get back to you soon. 🚀", "success");
+          form.reset();
+        } else {
+          showToast(json.message || "Something went wrong. Please try again.", "error");
+        }
+      })
+      .catch((err) => {
+        console.error("Form submit error:", err);
+        showToast("Network error. Please check your connection and try again.", "error");
+      })
+      .then(() => {
+        if (submitBtn) submitBtn.disabled = false;
+        if (submitSpan) submitSpan.textContent = originalText;
+      });
     });
   };
 

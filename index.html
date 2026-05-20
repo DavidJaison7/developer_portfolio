@@ -807,7 +807,8 @@
 
           <!-- Contact Form -->
           <div class="contact-form-wrapper glass" data-animate="fade-right">
-            <form id="contact-form" class="contact-form" action="#" method="POST" novalidate>
+            <form id="contact-form" class="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+              <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" id="web3forms-access-key">
               <div class="form-group" id="form-group-name">
                 <label for="contact-name" class="form-label">
                   <i class="fas fa-user" aria-hidden="true"></i> Your Name
