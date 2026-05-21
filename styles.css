@@ -2929,7 +2929,7 @@ button {
 }
 .about-image {
   position: relative;
-  border-radius: var(--radius-lg);
+  border-radius: 50%;
   overflow: hidden;
   aspect-ratio: 1;
   display: flex;
@@ -2937,31 +2937,17 @@ button {
   justify-content: center;
   background: var(--bg-glass);
   border: var(--border-glass);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  transition: transform var(--transition-normal);
 }
-.avatar-initials {
-  font-family: var(--font-heading);
-  font-size: var(--fs-6xl);
-  font-weight: var(--fw-bold);
-  background: var(--accent-gradient);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+.about-image:hover {
+  transform: scale(1.02);
 }
-.avatar-ring {
-  position: absolute;
-  inset: 15px;
-  border: 2px dashed var(--accent-cyan-dim);
-  border-radius: 50%;
-  animation: rotateSlow 20s linear infinite;
-}
-.about-image-decoration {
-  position: absolute;
-  inset: -8px;
-  border: 2px solid transparent;
-  border-image: var(--accent-gradient) 1;
-  border-radius: var(--radius-lg);
-  opacity: 0.4;
-  z-index: var(--z-behind);
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 .about-content {
   display: flex;
