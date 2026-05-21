@@ -2685,10 +2685,12 @@ button {
 .hero-section {
   position: relative;
   min-height: 100vh;
+  min-height: 100dvh; /* Use dynamic viewport height for mobile browsers */
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: calc(var(--nav-height) + var(--space-3xl)) var(--space-lg) var(--space-3xl);
+  padding: calc(var(--nav-height) + var(--space-2xl)) var(--space-lg) var(--space-2xl);
   overflow: hidden;
 }
 .hero-section::before {
@@ -2842,14 +2844,14 @@ button {
   flex-wrap: wrap;
 }
 .hero-scroll-indicator {
-  position: absolute;
-  bottom: var(--space-2xl);
-  left: 50%;
-  transform: translateX(-50%);
+  /* Use relative positioning so it flows naturally after hero-content */
+  position: relative;
+  margin-top: var(--space-2xl);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--space-sm);
+  width: 100%;
 }
 .scroll-mouse {
   width: 24px;
@@ -3747,7 +3749,7 @@ button {
     position: fixed;
     inset: 0;
     z-index: calc(var(--z-nav) - 1);
-    background: rgba(10, 10, 15, 0.97);
+    background: var(--bg-primary);
     backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(30px);
     flex-direction: column;
@@ -3790,7 +3792,343 @@ button {
     left: 0;
   }
   .timeline-marker {
-    left: calc(-1 * var(--xl) - 18px);
+    left: calc(-1 * var(--space-xl) - 18px);
+  }
+
+  /* Hero section mobile */
+  .hero-section {
+    padding: calc(var(--nav-height) + var(--space-xl)) var(--space-md) var(--space-xl);
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+  .hero-title {
+    font-size: clamp(1.75rem, 7vw, var(--fs-4xl));
+  }
+  .hero-typing-wrapper {
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+  .typing-prefix,
+  .typing-text {
+    font-size: var(--fs-lg);
+  }
+  .hero-tagline {
+    font-size: var(--fs-sm);
+  }
+  .hero-cta {
+    flex-direction: column;
+    width: 100%;
+  }
+  .hero-cta .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .hero-scroll-indicator {
+    margin-top: var(--space-xl);
+  }
+
+  /* Section titles */
+  .section-title {
+    font-size: var(--fs-2xl);
+  }
+
+  /* Skills grid */
+  .skill-category {
+    padding: var(--space-xl);
+  }
+
+  /* Projects */
+  .project-card {
+    height: auto;
+    min-height: unset;
+  }
+  .project-title {
+    font-size: var(--fs-lg);
+  }
+
+  /* Contact */
+  .contact-form-wrapper {
+    padding: var(--space-xl);
+  }
+  .contact-form .btn {
+    width: 100%;
+  }
+
+  /* Footer */
+  .footer {
+    padding: var(--space-2xl) var(--space-md) var(--space-lg);
+  }
+}
+
+
+/* ============================================================
+   RESPONSIVE — EXTRA-SMALL PHONES (≤ 360px)
+   iPhone SE, Galaxy S series, very narrow screens
+   ============================================================ */
+@media (max-width: 360px) {
+  :root {
+    --section-padding: var(--space-2xl) var(--space-sm);
+    --nav-height: 56px;
+  }
+
+  .hero-title {
+    font-size: clamp(1.5rem, 8vw, 2rem);
+  }
+  .typing-prefix,
+  .typing-text {
+    font-size: var(--fs-base);
+  }
+  .hero-badge {
+    font-size: 0.65rem;
+    padding: 4px 10px;
+  }
+  .hero-cta .btn {
+    padding: 12px 20px;
+    font-size: var(--fs-sm);
+  }
+  .hero-scroll-indicator {
+    display: none;
+  }
+
+  .section-title {
+    font-size: var(--fs-xl);
+  }
+  .section-tag {
+    font-size: 0.65rem;
+    padding: 3px 8px;
+  }
+
+  .about-image-wrapper {
+    max-width: 240px;
+  }
+  .avatar-initials {
+    font-size: var(--fs-4xl);
+  }
+  .about-subtitle {
+    font-size: var(--fs-lg);
+  }
+  .about-stats {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-sm);
+  }
+  .stat-card {
+    padding: var(--space-md);
+  }
+  .stat-number {
+    font-size: var(--fs-xl);
+  }
+  .stat-label {
+    font-size: 0.65rem;
+  }
+
+  .skill-category {
+    padding: var(--space-lg);
+  }
+  .skill-category-header h3 {
+    font-size: var(--fs-base);
+  }
+
+  .project-card {
+    padding: var(--space-lg);
+  }
+  .project-title {
+    font-size: var(--fs-base);
+  }
+  .project-description {
+    font-size: var(--fs-xs);
+  }
+
+  .cert-card {
+    padding: var(--space-md);
+    gap: var(--space-md);
+  }
+  .cert-icon {
+    width: 36px;
+    height: 36px;
+    font-size: var(--fs-base);
+  }
+  .cert-title {
+    font-size: var(--fs-sm);
+  }
+
+  .contact-form-wrapper {
+    padding: var(--space-lg);
+  }
+  .form-input {
+    padding: 10px 14px;
+    font-size: var(--fs-sm);
+  }
+  .contact-info-card {
+    padding: var(--space-md);
+    gap: var(--space-md);
+  }
+  .contact-info-icon {
+    width: 36px;
+    height: 36px;
+    font-size: var(--fs-base);
+  }
+
+  .nav-links .nav-link {
+    font-size: var(--fs-xl);
+  }
+
+  .footer-social-link,
+  .social-link {
+    width: 38px;
+    height: 38px;
+    font-size: var(--fs-base);
+  }
+}
+
+
+/* ============================================================
+   RESPONSIVE — SMALL PHONES (361px – 480px)
+   ============================================================ */
+@media (min-width: 361px) and (max-width: 480px) {
+  :root {
+    --section-padding: var(--space-3xl) var(--space-md);
+    --nav-height: 60px;
+  }
+
+  .hero-title {
+    font-size: clamp(1.75rem, 7vw, 2.5rem);
+  }
+  .typing-prefix,
+  .typing-text {
+    font-size: var(--fs-lg);
+  }
+
+  .about-image-wrapper {
+    max-width: 280px;
+  }
+
+  .nav-links .nav-link {
+    font-size: var(--fs-xl);
+  }
+}
+
+
+/* ============================================================
+   RESPONSIVE — LANDSCAPE PHONES
+   Short viewport height, wide width
+   ============================================================ */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero-section {
+    min-height: auto;
+    padding-top: calc(var(--nav-height) + var(--space-lg));
+    padding-bottom: var(--space-lg);
+  }
+  .hero-title {
+    font-size: var(--fs-2xl);
+    margin-bottom: var(--space-sm);
+  }
+  .hero-typing-wrapper {
+    margin-bottom: var(--space-sm);
+    min-height: 1.8em;
+  }
+  .typing-prefix,
+  .typing-text {
+    font-size: var(--fs-base);
+  }
+  .hero-tagline {
+    font-size: var(--fs-sm);
+    margin-bottom: var(--space-lg);
+  }
+  .hero-badge {
+    margin-bottom: var(--space-sm);
+  }
+  .hero-scroll-indicator {
+    display: none;
+  }
+  .hero-cta {
+    flex-direction: row;
+  }
+  .hero-cta .btn {
+    width: auto;
+  }
+}
+
+
+/* ============================================================
+   RESPONSIVE — TALL PHONES (19.5:9 and similar aspect ratios)
+   Extra tall viewports like iPhone 14 Pro Max, Samsung Galaxy S24
+   ============================================================ */
+@media (max-width: 430px) and (min-height: 800px) {
+  .hero-section {
+    justify-content: center;
+    padding-bottom: var(--space-3xl);
+  }
+  .hero-scroll-indicator {
+    margin-top: var(--space-2xl);
+  }
+}
+
+
+/* ============================================================
+   RESPONSIVE — LARGE DESKTOPS (≥ 1440px)
+   ============================================================ */
+@media (min-width: 1440px) {
+  :root {
+    --container-max: 1320px;
+  }
+  .hero-title {
+    font-size: var(--fs-6xl);
+  }
+  .typing-prefix,
+  .typing-text {
+    font-size: var(--fs-2xl);
+  }
+  .hero-tagline {
+    font-size: var(--fs-lg);
+  }
+}
+
+
+/* ============================================================
+   THEME TOGGLE BUTTON
+   ============================================================ */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 80px; /* Offset from hamburger on mobile */
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--bg-glass-border);
+  background: var(--bg-glass);
+  color: var(--text-primary);
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: calc(var(--z-nav) + 1);
+  transition: background 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.theme-toggle:hover {
+  background: var(--accent-cyan-dim);
+  border-color: var(--accent-cyan-glow);
+  transform: scale(1.1);
+}
+
+/* On tablet+ screens, position the toggle to the right edge */
+@media (min-width: 768px) {
+  .theme-toggle {
+    top: 20px;
+    right: 24px;
+  }
+}
+
+/* On small phones, make the toggle smaller and well-positioned */
+@media (max-width: 360px) {
+  .theme-toggle {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+    top: 14px;
+    right: 60px;
   }
 }
 

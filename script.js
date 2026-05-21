@@ -1238,37 +1238,16 @@ const ThemeToggle = (() => {
       toggleBtn = document.createElement("button");
       toggleBtn.className = "theme-toggle";
       toggleBtn.setAttribute("aria-label", "Toggle theme");
-      toggleBtn.style.cssText = `
-        position: fixed;
-        top: 24px;
-        right: 24px;
-        width: 44px;
-        height: 44px;
-        border-radius: 50%;
-        border: 1px solid rgba(0, 255, 255, 0.3);
-        background: rgba(0, 255, 255, 0.08);
-        color: #0ff;
-        font-size: 1.2rem;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 10000;
-        transition: background 0.3s ease, transform 0.3s ease;
-        backdrop-filter: blur(8px);
-      `;
+      // No inline styles — all styling is handled by .theme-toggle in CSS
+      // This allows responsive media queries to properly position the button
 
-      // Hover effect
-      toggleBtn.addEventListener("mouseenter", () => {
-        toggleBtn.style.background = "rgba(0, 255, 255, 0.2)";
-        toggleBtn.style.transform = "scale(1.1)";
-      });
-      toggleBtn.addEventListener("mouseleave", () => {
-        toggleBtn.style.background = "rgba(0, 255, 255, 0.08)";
-        toggleBtn.style.transform = "scale(1)";
-      });
-
-      document.body.appendChild(toggleBtn);
+      // Insert into the nav-container if it exists, otherwise body
+      const navContainer = $(".nav-container");
+      if (navContainer) {
+        navContainer.appendChild(toggleBtn);
+      } else {
+        document.body.appendChild(toggleBtn);
+      }
     }
 
     return toggleBtn;
