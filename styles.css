@@ -2844,14 +2844,15 @@ button {
   flex-wrap: wrap;
 }
 .hero-scroll-indicator {
-  /* Use relative positioning so it flows naturally after hero-content */
-  position: relative;
-  margin-top: var(--space-2xl);
+  /* On desktop: absolute at bottom of hero section */
+  position: absolute;
+  bottom: var(--space-2xl);
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--space-sm);
-  width: 100%;
 }
 .scroll-mouse {
   width: 24px;
@@ -3824,7 +3825,12 @@ button {
     justify-content: center;
   }
   .hero-scroll-indicator {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    transform: none;
     margin-top: var(--space-xl);
+    width: 100%;
   }
 
   /* Section titles */
@@ -4088,24 +4094,25 @@ button {
    THEME TOGGLE BUTTON
    ============================================================ */
 .theme-toggle {
-  position: fixed;
-  top: 20px;
-  right: 80px; /* Offset from hamburger on mobile */
-  width: 44px;
-  height: 44px;
+  /* Default: sits in the nav-container flex row */
+  position: relative;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   border: 1px solid var(--bg-glass-border);
   background: var(--bg-glass);
   color: var(--text-primary);
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: calc(var(--z-nav) + 1);
+  z-index: var(--z-nav);
   transition: background 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
+  flex-shrink: 0;
+  margin-left: var(--space-md);
 }
 .theme-toggle:hover {
   background: var(--accent-cyan-dim);
@@ -4113,22 +4120,27 @@ button {
   transform: scale(1.1);
 }
 
-/* On tablet+ screens, position the toggle to the right edge */
-@media (min-width: 768px) {
-  .theme-toggle {
-    top: 20px;
-    right: 24px;
-  }
-}
-
-/* On small phones, make the toggle smaller and well-positioned */
-@media (max-width: 360px) {
+/* On mobile, keep it in the nav flow but smaller */
+@media (max-width: 767px) {
   .theme-toggle {
     width: 36px;
     height: 36px;
     font-size: 1rem;
-    top: 14px;
-    right: 60px;
+    margin-left: auto;
+    margin-right: var(--space-md);
+    order: 1; /* Ensure it sits between nav-links and hamburger */
+  }
+  .hamburger {
+    order: 2;
   }
 }
 
+/* Extra-small phones */
+@media (max-width: 360px) {
+  .theme-toggle {
+    width: 32px;
+    height: 32px;
+    font-size: 0.9rem;
+    margin-right: var(--space-sm);
+  }
+}

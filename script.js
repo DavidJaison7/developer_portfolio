@@ -1069,12 +1069,11 @@ const CustomCursor = (() => {
       width: 6px;
       height: 6px;
       border-radius: 50%;
-      background: #0ff;
+      background: #000;
       pointer-events: none;
       z-index: 100001;
       transform: translate(-50%, -50%);
       transition: width 0.3s ease, height 0.3s ease, background 0.3s ease;
-      mix-blend-mode: difference;
     `;
 
     // Outline ring
@@ -1087,7 +1086,7 @@ const CustomCursor = (() => {
       width: 36px;
       height: 36px;
       border-radius: 50%;
-      border: 1.5px solid rgba(0, 255, 255, 0.5);
+      border: 1.5px solid rgba(0, 0, 0, 0.3);
       pointer-events: none;
       z-index: 100000;
       transform: translate(-50%, -50%);
