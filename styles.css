@@ -2844,15 +2844,14 @@ button {
   flex-wrap: wrap;
 }
 .hero-scroll-indicator {
-  /* On desktop: absolute at bottom of hero section */
-  position: absolute;
-  bottom: var(--space-2xl);
-  left: 50%;
-  transform: translateX(-50%);
+  /* Use relative positioning so it flows naturally after hero-content CTA buttons */
+  position: relative;
+  margin-top: var(--space-4xl);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--space-sm);
+  width: 100%;
 }
 .scroll-mouse {
   width: 24px;
@@ -3811,12 +3810,7 @@ button {
     justify-content: center;
   }
   .hero-scroll-indicator {
-    position: relative;
-    bottom: auto;
-    left: auto;
-    transform: none;
     margin-top: var(--space-xl);
-    width: 100%;
   }
 
   /* Section titles */

@@ -1069,7 +1069,7 @@ const CustomCursor = (() => {
       width: 6px;
       height: 6px;
       border-radius: 50%;
-      background: #000;
+      background: #0ff;
       pointer-events: none;
       z-index: 100001;
       transform: translate(-50%, -50%);
